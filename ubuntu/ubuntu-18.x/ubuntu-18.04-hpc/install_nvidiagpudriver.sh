@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+# set -ex
 
 $UBUNTU_COMMON_DIR/install_nvidiagpudriver.sh
 
@@ -12,7 +12,7 @@ sudo dpkg -i gdrdrv-dkms_2.3-1_amd64.Ubuntu18_04.deb
 sudo apt-mark hold gdrdrv-dkms
 sudo dpkg -i libgdrapi_2.3-1_amd64.Ubuntu18_04.deb
 sudo apt-mark hold libgdrapi
-sudo dpkg -i gdrcopy-tests_2.3-1_amd64.Ubuntu18_04.deb
+sudo dpkg -i ./gdrcopy-tests_2.3-1_amd64.Ubuntu18_04+cuda11.2.deb
 sudo apt-mark hold gdrcopy-tests
 sudo dpkg -i gdrcopy_2.3-1_amd64.Ubuntu18_04.deb
 sudo apt-mark hold gdrcopy
